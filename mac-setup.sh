@@ -1,6 +1,8 @@
 xcode-select --install
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-echo 'PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo >> /Users/marionmiranda/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/marionmiranda/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 brew update
 brew install coreutils
 brew tap homebrew/dupes
@@ -29,15 +31,10 @@ brew install bash-completion
 brew install watch
 brew install postgresql
 brew install node
-brew install ffmpeg
-pip install speedtest-cli
-brew install wifi-password
-brew install qlcolorcode qlstephen qlmarkdown quicklook-json webpquicklook suspicious-package quicklookase qlvideo qlImageSize
 brew install file-formula
 brew install openssh
 brew install perl
 brew install rsync
-brew install svn
 brew install unzip
 brew install vim --override-system-vi
 brew install zsh
@@ -45,9 +42,9 @@ brew install python3
 brew install --cask betterzip 	
 brew install --cask webpquicklook  
 brew install --cask github
-brew install --caskappcleaner 
-brew install --cask sublime-text
-brew install --casktransmission 
+brew install --cask appcleaner 
+brew install --cask transmission 
 brew install --cask java
+brew install --cask iterm2
 brew cleanup
 rm -f -r /Library/Caches/Homebrew/*
